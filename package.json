@@ -4,7 +4,10 @@
   "description": "find words in English dictionary with autosuggestion!",
   "main": "index.js",
   "devDependencies": {
-    "jshint": "^2.6.0"
+    "codeclimate-test-reporter": "0.0.4",
+    "istanbul": "^0.3.14",
+    "jshint": "^2.7.0",
+    "pre-commit": "^1.0.7"
   },
   "directories": {
     "test": "test"
@@ -19,9 +22,13 @@
     "start": "node server.js",
     "nodemon": "./node_modules/.bin/nodemon ./server.js"
   },
+  "pre-commit": [
+    "jshint",
+    "coverage"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/docdis/autocomplete.git"
+    "url": "https://github.com/jrans/nodediggity.git"
   },
   "keywords": [
     "autocomplete",
@@ -29,23 +36,14 @@
     "dictionary",
     "suggestions"
   ],
-  "author": "@nelsonic <contact.nelsonic@gmail.com> (https://github.com/nelsonic)",
+  "author": "jrans",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/docdis/autocomplete/issues"
+    "url": "https://github.com/jrans/nodediggity/issues"
   },
-  "homepage": "https://github.com/docdis/autocomplete",
-  "devDependencies": {
-    "codeclimate-test-reporter": "0.0.4",
-    "istanbul": "^0.3.14",
-    "jshint": "^2.7.0",
-    "pre-commit": "1.0.7"
-  },
-  "pre-commit": [
-    "jshint",
-    "coverage",
-    "codeclimate"
-  ],
+
+  "homepage": "https://github.com/jrans/nodediggity",
+
   "engines": {
     "node": ">= 0.10"
   }
