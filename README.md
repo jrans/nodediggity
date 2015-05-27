@@ -6,6 +6,7 @@
 
 [![devDependency Status](https://david-dm.org/jrans/nodediggity/dev-status.svg)](https://david-dm.org/jrans/nodediggity#info=devDependencies)
 
+[![Build Status](https://travis-ci.org/jrans/nodediggity.svg?branch=master)](https://travis-ci.org/jrans/nodediggity)
 
 ***Finding words*** in the dictionary used to be tedious and slow!
 Now, its ***fast, easy and fun***!  
