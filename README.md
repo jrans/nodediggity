@@ -91,13 +91,18 @@ sometimes you might need to completely ***re-start the server*** `npm run nodemo
 ### Repo Owner
 
 + [x] Add a ***.jshintrc*** file to your project
-+ [x] learn about ***pre-commit hooks*** and add a pre-commit hook to lint
++ [ ] learn about ***pre-commit hooks*** and add a pre-commit hook to lint
 your code *before* anyone can commit (*unlinted*) code. (*code quality/consistency #FTW!*)
-+ [x] Learn about ***CodeClimate***, signup using your GitHub account and add badge to repo readme.
-+ [x] Learn about (*Continuous Integration*) ***Travis-CI*** and
-  + [x] add .**travis.yml** to your repo
-  + [x] add "***build passing***" badge to your readme
-+ [x] Add **Dependencies Badge** to your readme
+
+Answer from: http://githooks.com/
+(overwrite script in .git/hooks)
+
+
++ [ ] Learn about ***CodeClimate***, signup using your GitHub account and add badge to repo readme.
++ [ ] Learn about (*Continuous Integration*) ***Travis-CI*** and
+  + [ ] add .**travis.yml** to your repo
+  + [ ] add "***build passing***" badge to your readme
++ [ ] Add **Dependencies Badge** to your readme
 
 see: https://github.com/dwyl/repo-badges
 
