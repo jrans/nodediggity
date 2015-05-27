@@ -4,12 +4,6 @@
 Now, its ***fast, easy and fun***!  
 ***autocomplete*** lets you ***easily find words in the english dictionary***!
 
-[![Build Status](https://travis-ci.org/docdis/autocomplete.svg)](https://travis-ci.org/docdis/autocomplete)
-[![Code Climate](https://codeclimate.com/github/docdis/autocomplete/badges/gpa.svg)](https://codeclimate.com/github/docdis/autocomplete)
-[![Test Coverage](https://codeclimate.com/github/docdis/autocomplete/badges/coverage.svg)](https://codeclimate.com/github/docdis/autocomplete/coverage)
-[![Dependency Status](https://david-dm.org/docdis/autocomplete.svg)](https://david-dm.org/docdis/autocomplete)
-[![devDependency Status](https://david-dm.org/docdis/autocomplete/dev-status.svg)](https://david-dm.org/docdis/autocomplete#info=devDependencies)
-
 ## Why?
 
 Learning how to build full-stack single-page apps can be laborious when the example app isn't particularly interesing/engaging, **Word Finder** is an *ultra-simple* app that will teach you full-stack test-driven-development using (*only*) ***core node.js*** modules on the backend and basic JQuery on the front-end (*no fancy frameworks*)
