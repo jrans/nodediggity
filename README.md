@@ -4,6 +4,8 @@
 
 [![Test Coverage](https://codeclimate.com/github/jrans/nodediggity/badges/coverage.svg)](https://codeclimate.com/github/jrans/nodediggity/coverage)
 
+[![devDependency Status](https://david-dm.org/jrans/nodediggity/dev-status.svg)](https://david-dm.org/jrans/nodediggity#info=devDependencies)
+
 
 ***Finding words*** in the dictionary used to be tedious and slow!
 Now, its ***fast, easy and fun***!  
