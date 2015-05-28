@@ -52,12 +52,12 @@ ac.define = function (word, callback){
         });
 
         response.on('end', function () {
-            if(response.statusCode === 200) {
+            // if(response.statusCode === 200) {
 
                 wordDef = JSON.parse(body);
                 //console.log(body);
                 return callback(null, wordDef);
-            }
+            // }
         });
 
 
