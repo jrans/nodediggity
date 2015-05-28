@@ -13,15 +13,16 @@ ac.import = function(callback){ // saving import fct as a property of ac{}
   });
 };
 
-ac.stats = function(word, callback){
+ac.stats = function(word, callee, callback){  
   if (!ac.searches){
     ac.searches = {};
   }
   if (!ac.searches[word]){
-    ac.searches[word] = [];
+    ac.searches[word] = {find:[],define:[]};
   }
-  ac.searches[word].push(new Date().getTime());
+  ac.searches[word][callee].push(new Date().getTime());
   callback(null, ac.searches);
+  console.log(ac.searches);
 };
 
 ac.findWord = function (word, callback){
@@ -33,6 +34,7 @@ ac.findWord = function (word, callback){
     }
   }
   return callback(null,found);
+
 };
 
 // record timestamp at which a search was made
