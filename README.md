@@ -102,8 +102,10 @@ sometimes you might need to completely ***re-start the server*** `npm run nodemo
 + [ ] learn about ***pre-commit hooks*** and add a pre-commit hook to lint
 your code *before* anyone can commit (*unlinted*) code. (*code quality/consistency #FTW!*)
 
-Answer from: http://githooks.com/
-(overwrite script in .git/hooks)
+https://github.com/docdis/learn-pre-commit
+
+everyone must type: npm install pre-commit to use this!
+precommit in turn uses sitnabhul and jshint so install these too!... npm intstall jshint -g 
 
 
 + [ ] Learn about ***CodeClimate***, signup using your  GitHub account and add badge to repo readme.

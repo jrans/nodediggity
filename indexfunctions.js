@@ -1,5 +1,5 @@
 //<!--inline JS functionality begins here -->
-//    
+//
 //    <!-- Button Switching script - switch to maintaining states? Or null all? -->
 
 document.getElementById('search-b').onclick = function () {
@@ -33,9 +33,6 @@ document.getElementById('random-b').onclick = function () {
 //    <!-- on first key up, two inline divs are created above the search bar -->
 //    <!-- On third key up api call searches for words starting with your term, puts them in LH div -->
 //    <!-- On third key up api call searches for words with your term in middle, puts them in RH div -->
-
-
-
 textApiQuery = function() {
     var searchInput = document.getElementById('search-input');
     console.log(searchInput);
@@ -94,7 +91,3 @@ dictEnter = function(){
 //    <!-- Function description -->
 //    <!-- Function description -->
 //    <!-- Function description -->
-    
-    
-    
-    
