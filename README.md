@@ -1,5 +1,13 @@
 # Word Finder (*autocomplete*) Mini (*Full-Stack*!) Project
 
+[![Code Climate](https://codeclimate.com/github/jrans/nodediggity/badges/gpa.svg)](https://codeclimate.com/github/jrans/nodediggity)
+
+[![Test Coverage](https://codeclimate.com/github/jrans/nodediggity/badges/coverage.svg)](https://codeclimate.com/github/jrans/nodediggity/coverage)
+
+[![devDependency Status](https://david-dm.org/jrans/nodediggity/dev-status.svg)](https://david-dm.org/jrans/nodediggity#info=devDependencies)
+
+[![Build Status](https://travis-ci.org/jrans/nodediggity.svg?branch=master)](https://travis-ci.org/jrans/nodediggity)
+
 ***Finding words*** in the dictionary used to be tedious and slow!
 Now, its ***fast, easy and fun***!  
 ***autocomplete*** lets you ***easily find words in the english dictionary***!
@@ -91,13 +99,32 @@ sometimes you might need to completely ***re-start the server*** `npm run nodemo
 ### Repo Owner
 
 + [x] Add a ***.jshintrc*** file to your project
-+ [x] learn about ***pre-commit hooks*** and add a pre-commit hook to lint
++ [ ] learn about ***pre-commit hooks*** and add a pre-commit hook to lint
 your code *before* anyone can commit (*unlinted*) code. (*code quality/consistency #FTW!*)
-+ [x] Learn about ***CodeClimate***, signup using your GitHub account and add badge to repo readme.
-+ [x] Learn about (*Continuous Integration*) ***Travis-CI*** and
-  + [x] add .**travis.yml** to your repo
-  + [x] add "***build passing***" badge to your readme
-+ [x] Add **Dependencies Badge** to your readme
+
+Answer from: http://githooks.com/
+(overwrite script in .git/hooks)
+
+
++ [ ] Learn about ***CodeClimate***, signup using your  GitHub account and add badge to repo readme.
+Code Climate in a Nutshell
+
+Code Climate has one goal: Help you and your team write amazing code!
+
+We run static and automated analysis on your Ruby on Rails, JavaScript, PHP (beta), or Python (beta) codebase, and then present you with easy-to-read, actionable findings.
+
+How it Works
+
+Step 1: Push commits to your GitHub or Internet-accessible Git repository.
+Step 2: Code Climate automatically clones/pulls from your repository and analyzes each commit. Our analysis runs in minutes, not hours.
+Step 3: See how your codebase is changing over time through our website (here's a tour!), smart email alerts, and integration notifications (like Slack and Campfire). You’re empowered to address code quality and security issues quickly, efficiently, and collaboratively.
+
+The number in our badge is the code quality score for the project measured on a number of factors including Complexity/Simplicity, Readability, Maintainability, Repetition and Line-count-per-file . The maximum score is 4.0 and we obviously strive to achieve this level in all our work. https://github.com/docdis/learn-codeclimate
+
++ [ ] Learn about (*Continuous Integration*) ***Travis-CI*** and
+  + [ ] add .**travis.yml** to your repo
+  + [ ] add "***build passing***" badge to your readme
++ [ ] Add **Dependencies Badge** to your readme
 
 see: https://github.com/dwyl/repo-badges
 
