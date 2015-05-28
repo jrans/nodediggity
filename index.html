@@ -1,66 +1,185 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Autocomplete Word Lookup like a Boss!</title>
+    <title>Diggity Dictionary</title>
   </head>
   <body>
+    <!-- Body separated into 2 main elements, a main div that covers the search function, a navigation div that contains the tabs -->
+    
     <div id='main'>
-      <h1>Search your words!</h1>
-      <input type='text' id='search'> </input>
-      <div id='results'> </div>
+
+      <div id='search'>
+          <h1>Search</h1>
+          <input type='text' id='search-input' placeholder='Diggity?'> </input>
+          <button id='search-req'></button>
+      </div>
+      <div id='search-res'>SearchRes</div>
+      
+      <div id='history'>
+          <h1>History</h1>
+          <div id='search-hist'>SearchHist</div>
+      </div>
+      
+      <!-- This is a div for stretch goal, random history, to be dsiplayed next to search history.
+      <div id='rand-hist'></div> -->
+      <div id='hist-res'>HistRes</div>
+      
+      <div id='random'>
+          <h1>Random</h1>
+      </div>
+      <div id='rand-res'>RandRes</div>
+      <!-- This is a fourth surprise div for the stretch goal of displaying a No Diggity video if someone searches for "No diggity"
+      <div id='rap'></div>
+      -->
+    
     </div>
-
+    <div id='navigation'>
+        <button id='search-b'>Search</button>
+        <button id='history-b'>History</button>
+        <button id='random-b'>Random</button>
+    </div>
+    
     <style>
-
-body {
-  min-height: 100%;
-  height: 100%
-}
-#main {
-  height: 30%;
-}
-#quint {
-  height: 70%;
-  bottom: 0;
-  position: fixed;
-}
+        body {
+          text-align: center;
+          min-height: 100%;
+          height: 100%
+          max-width: 600px;
+          font-family: garamond, sans-serif;
+          background-color: aquamarine;
+        }
+        #main {
+          height: 90%;
+        }
+        #search{
+          display: block;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        #search-res{
+          display: none;    
+        }
+        #history{
+          display: none;    
+        }
+        #hist-res{
+          display: none;    
+        }
+        #random{
+          display: none;    
+        }
+        #rand-res{
+          display: none;    
+        }
+        
+        <!-- divs for inline search results -->
+        #res-start {
+          display: inline-block;
+          background-color: black;
+        }
+        
+        #res-middle {
+          display: inline-block;
+          background-color: red;    
+        }
+        
+        
+        
+        #navigation {
+          height: 10%;
+            position: absolute:;
+            bottom: 0;
+        }
+        #naviation button {
+          color: aqua;    
+        }
+        #quint {
+          height: 70%;
+          bottom: 0;
+          position: fixed;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
     <div id="qunit"></div>
     <div id="qunit-fixture"></div>
     <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
-
+    <script src="indextests.js"></script>
+    
+    <!--inline JS functionality begins here -->
+    
+    <!-- Button Switching script - switch to maintaining states? Or null all? -->
     <script>
-
-test('Search for words beginning with awes', function(assert){
-  var done = assert.async();
-  $.get('/find/awes', function handler(data) {
-    console.log(data);
-    var words = data.split(',');
-    assert.equal(words.length, 4, 'number of suggestions for awes is 4');
-  });
-});
-
+        document.getElementById('search-b').onclick = function() {
+            document.getElementById('search-res').style.display = 'none';
+            document.getElementById('history').style.display = 'none';
+            document.getElementById('hist-res').style.display = 'none';
+            document.getElementById('random').style.display = 'none';
+            document.getElementById('rand-res').style.display = 'none';
+            document.getElementById('search').style.display = 'block';
+        };
+    </script>
+    <script>
+        document.getElementById('history-b').onclick = function() {
+            document.getElementById('search').style.display = 'none';
+            document.getElementById('search-res').style.display = 'none';
+            document.getElementById('hist-res').style.display = 'none';
+            document.getElementById('random').style.display = 'none';
+            document.getElementById('rand-res').style.display = 'none';
+            document.getElementById('history').style.display = 'block';
+        };
+    </script>
+    <script>
+        document.getElementById('random-b').onclick = function() {
+            document.getElementById('search').style.display = 'none';
+            document.getElementById('search-res').style.display = 'none';
+            document.getElementById('history').style.display = 'none';
+            document.getElementById('hist-res').style.display = 'none';
+            document.getElementById('rand-res').style.display = 'none';
+            document.getElementById('random').style.display = 'block';
+        };
     </script>
 
-
-<script>
-  $('#search').keyup(function(e) {
-    var word = $('#search').val();
-    if (word.length > 2) {
-      $.get('/find/'+word, function handler(data) {
-        console.log(data);
-        var words = data.split(',');
-        var results = '';
-        for(var i=0; i < words.length; i++) {
-          results += "<p> " + words[i] + "</p>";
+    <!-- on first key up, two inline divs are created above the search bar -->
+    <!-- On third key up api call searches for words starting with your term, puts them in LH div -->
+    <!-- On third key up api call searches for words with your term in middle, puts them in RH div -->
+    <script>
+        var searchInput = document.getElementByID('search-input').innerHTML;
+        var p = document.createElement("p")
+        var p = document.createElement("p")
+        searchInput.onkeyup = function() {
+            if(searchInput.value.length == 1) {
+                searchInput.appendChild('res-start')
+                searchInput.appendChild('res-middle')
+                //Create two divs
+            } else if (document.getElementByID('search-input').length > 2){
+                //api call, push words starting with value to lh bar
+                //api call, push words with value in it minus values in lh bar to rh bar
+            }
         }
-        $('#results').html(results);
-      });
-    }
-  })
-</script>
-
+    </script>
+    
+    <!-- On return or submit button press, two divs collapse to search results -->
+    <!-- On return or submit button press, search bar animates up to 30% of vertical height -->
+    <!-- On return or submit button press, Dictionary div gets appended to search bar -->
+    <!-- On return or submit, your search term is added to your history -->
+    <!-- History is filled with your prior search terms, if no search term has been inputted, "No diggity" is displayed -->
+    <!-- On clicking a history term the term is placed in the history res page, and displays definition -->
+    <!-- On clicking random button, a word is selected from the dictionary at random -->
+    <!-- On clicking random button, the random button is placed in the random res div, and shown -->
+    <!-- Stretch goal: If you type diggity or no diggity into the search bar, it displays the youtube video... -->
+    <!-- Function description -->
+    <!-- Function description -->
+    <!-- Function description -->
+    <!-- Function description -->
+    <!-- Function description -->
+    <!-- Function description -->
+    <!-- Function description -->
+    <!-- Function description -->
+    
+    
+    
+    
   </body>
 </html>
