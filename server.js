@@ -1,6 +1,7 @@
 var http = require('http');
 var port = process.env.PORT || 3000;
 var ac = require('./index.js');
+var word; 
 
 //load in the words from the file
 ac.import(function(err, count) {
@@ -20,7 +21,7 @@ http.createServer(function handler(request, response) {
 
   if (url.indexOf('/find/') > -1) {
     // locahost:3000/find/word
-    var word = url.split('/')[2];
+    word = url.split('/')[2];
     // console.log(word);
     ac.findWord(word, function (err, found){
       // console.log(found);
