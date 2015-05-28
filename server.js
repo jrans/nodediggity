@@ -10,6 +10,7 @@ ac.import(function(err, count) {
 
 var fs = require('fs');
 var index = fs.readFileSync(__dirname + '/index.html');
+var indexTests = fs.readFileSync(__dirname + '/indextests.js');
 
 http.createServer(function handler(request, response) {
   var url = request.url;
@@ -18,6 +19,11 @@ http.createServer(function handler(request, response) {
   if (url.length === 1) {
     response.writeHead(200, {"Content-Type": "text/html"});
     response.end(index.toString());
+  }
+  
+  if (url == "/indextests.js") {
+  	response.writeHead(200, {"Content-Type": "text/javascript"});
+    response.end(indexTests.toString());
   }
 
   if (url.indexOf('/find/') > -1) {

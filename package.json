@@ -41,7 +41,20 @@
   "bugs": {
     "url": "https://github.com/jrans/nodediggity/issues"
   },
+    
   "homepage": "https://github.com/jrans/nodediggity",
+  "devDependencies": {
+    "codeclimate-test-reporter": "0.0.4",
+    "istanbul": "^0.3.14",
+    "pre-commit": "1.0.7",
+    "qunitjs": "^1.18.0"
+  },
+  "pre-commit": [
+    "jshint",
+    "coverage",
+    "codeclimate"
+  ],
+
   "engines": {
     "node": ">= 0.10"
   }
