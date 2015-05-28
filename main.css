@@ -9,12 +9,16 @@ body {
 #main {
   height: 90%;
 }
+
+/*main search bar, replicable for other search bars, possible optimisation with extended css languages*/
 #search{
   display: block;
   vertical-align: middle;
   position: relative;
   top: 1%;
 }
+
+/*search results block, to appear above search bar*/
 #search-res{
   display: block;
   position: relative;
@@ -40,6 +44,8 @@ body {
   overflow-y: scroll;
   visibility: hidden;
 }
+
+/*future page blocks, will require optimisation for height, etc*/
 #history{
   display: none;    
 }
@@ -57,7 +63,7 @@ body {
 
 
 
-
+/*nav bar to stick on the bottom*/
 #navigation {
   height: 10%;
   position: absolute:;

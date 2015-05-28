@@ -1,6 +1,6 @@
 //<!--inline JS functionality begins here -->
 //
-//    <!-- Button Switching script - switch to maintaining states? Or null all? -->
+//    <!-- Button Switching script - possible improvements: switch to maintaining states? Or null all? -->
 
 document.getElementById('search-b').onclick = function () {
     document.getElementById('search-res').style.display = 'block';
@@ -29,7 +29,7 @@ document.getElementById('random-b').onclick = function () {
     document.getElementById('random').style.display = 'block';
 };
 
-
+// This text block is for the basic functions of the search api calls. It is currently in dummy form to demonstrate visibility switching, and will call the API up on each click
 //    <!-- on first key up, two inline divs are created above the search bar -->
 //    <!-- On third key up api call searches for words starting with your term, puts them in LH div -->
 //    <!-- On third key up api call searches for words with your term in middle, puts them in RH div -->
