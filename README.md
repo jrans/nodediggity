@@ -365,3 +365,4 @@ Also it will look a *lot* better if the characters the person typed were *hightl
 
 **Note**: you will need to update your test for the number of
 results returned by the `ac.findWords` method to reflect the wider search...
+.
