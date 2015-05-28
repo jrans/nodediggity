@@ -2,51 +2,51 @@
 //    
 //    <!-- Button Switching script - switch to maintaining states? Or null all? -->
 
-        document.getElementById('search-b').onclick = function() {
-            document.getElementById('search-res').style.display = 'none';
-            document.getElementById('history').style.display = 'none';
-            document.getElementById('hist-res').style.display = 'none';
-            document.getElementById('random').style.display = 'none';
-            document.getElementById('rand-res').style.display = 'none';
-            document.getElementById('search').style.display = 'block';
-        };
+document.getElementById('search-b').onclick = function() {
+    document.getElementById('search-res').style.display = 'none';
+    document.getElementById('history').style.display = 'none';
+    document.getElementById('hist-res').style.display = 'none';
+    document.getElementById('random').style.display = 'none';
+    document.getElementById('rand-res').style.display = 'none';
+    document.getElementById('search').style.display = 'block';
+};
 
-        document.getElementById('history-b').onclick = function() {
-            document.getElementById('search').style.display = 'none';
-            document.getElementById('search-res').style.display = 'none';
-            document.getElementById('hist-res').style.display = 'none';
-            document.getElementById('random').style.display = 'none';
-            document.getElementById('rand-res').style.display = 'none';
-            document.getElementById('history').style.display = 'block';
-        };
+document.getElementById('history-b').onclick = function() {
+    document.getElementById('search').style.display = 'none';
+    document.getElementById('search-res').style.display = 'none';
+    document.getElementById('hist-res').style.display = 'none';
+    document.getElementById('random').style.display = 'none';
+    document.getElementById('rand-res').style.display = 'none';
+    document.getElementById('history').style.display = 'block';
+};
 
-        document.getElementById('random-b').onclick = function() {
-            document.getElementById('search').style.display = 'none';
-            document.getElementById('search-res').style.display = 'none';
-            document.getElementById('history').style.display = 'none';
-            document.getElementById('hist-res').style.display = 'none';
-            document.getElementById('rand-res').style.display = 'none';
-            document.getElementById('random').style.display = 'block';
-        };
+document.getElementById('random-b').onclick = function() {
+    document.getElementById('search').style.display = 'none';
+    document.getElementById('search-res').style.display = 'none';
+    document.getElementById('history').style.display = 'none';
+    document.getElementById('hist-res').style.display = 'none';
+    document.getElementById('rand-res').style.display = 'none';
+    document.getElementById('random').style.display = 'block';
+};
 
 
 //    <!-- on first key up, two inline divs are created above the search bar -->
 //    <!-- On third key up api call searches for words starting with your term, puts them in LH div -->
 //    <!-- On third key up api call searches for words with your term in middle, puts them in RH div -->
 
-        var searchInput = document.getElementByID('search-input').innerHTML;
-        var p = document.createElement("p")
-        var p = document.createElement("p")
-        searchInput.onkeyup = function() {
-            if(searchInput.value.length == 1) {
-                searchInput.appendChild('res-start')
-                searchInput.appendChild('res-middle')
-                //Create two divs
-            } else if (document.getElementByID('search-input').length > 2){
-                //api call, push words starting with value to lh bar
-                //api call, push words with value in it minus values in lh bar to rh bar
-            }
-        }
+
+document.getElementByID('search-input').onkeyup = function() {
+    var p = document.createElement("p")
+    var p = document.createElement("p")
+    if(searchInput.value.length == 1) {
+        searchInput.appendChild('res-start')
+        searchInput.appendChild('res-middle')
+        //Create two divs
+    } else if (document.getElementByID('search-input').length > 2){
+        //api call, push words starting with value to lh bar
+        //api call, push words with value in it minus values in lh bar to rh bar
+    }
+}
 
     
 //    <!-- On return or submit button press, two divs collapse to search results -->
