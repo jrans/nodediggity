@@ -1,25 +1,26 @@
 {
   "name": "word-finder",
   "version": "1.0.3",
-  "description": "find words in English dictionary with autosuggestion!",
+  "description": "find words in English dictionary with auto suggestion",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "devDependencies": {
     "codeclimate-test-reporter": "0.0.4",
     "istanbul": "^0.3.14",
     "jshint": "^2.7.0",
-    "pre-commit": "^1.0.7"
-  },
-  "directories": {
-    "test": "test"
+    "pre-commit": "^1.0.7",
+    "nodemon": "^1.3.7"
   },
   "scripts": {
     "test": "node test/test.js",
     "nocov": "node test/*.js",
-    "coverage": "./node_modules/.bin/istanbul cover test/*.js && ./node_modules/.bin/istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
     "codeclimate": "CODECLIMATE_REPO_TOKEN=c72e0ce0a9d9768f5ca36e9db0851798f46e726762b68f8103f3027ca361b359 ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info",
     "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
     "start": "node server.js",
-    "nodemon": "./node_modules/.bin/nodemon ./server.js"
+    "nodemon": "./node_modules/.bin/nodemon ./server.js",
+    "coverage": "istanbul cover test/*.js && ./node_modules/.bin/istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100"
   },
   "pre-commit": [
     "jshint",
@@ -53,6 +54,7 @@
     "coverage",
     "codeclimate"
   ],
+
   "engines": {
     "node": ">= 0.10"
   }
