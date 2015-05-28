@@ -1,5 +1,5 @@
 //<!--inline JS functionality begins here -->
-//    
+//
 //    <!-- Button Switching script - switch to maintaining states? Or null all? -->
 
 document.getElementById('search-b').onclick = function() {
@@ -36,17 +36,16 @@ document.getElementById('random-b').onclick = function() {
 
 
 document.getElementByID('search-input').onkeyup = function() {
-    var p = document.createElement("p")
-    var p = document.createElement("p")
+    var p = document.createElement("p");
     if(searchInput.value.length == 1) {
-        searchInput.appendChild('res-start')
-        searchInput.appendChild('res-middle')
+        searchInput.appendChild('res-start');
+        searchInput.appendChild('res-middle');
         //Create two divs
     } else if (document.getElementByID('search-input').length > 2){
         //api call, push words starting with value to lh bar
         //api call, push words with value in it minus values in lh bar to rh bar
     }
-}
+};
 
     
 //    <!-- On return or submit button press, two divs collapse to search results -->
@@ -66,7 +65,3 @@ document.getElementByID('search-input').onkeyup = function() {
 //    <!-- Function description -->
 //    <!-- Function description -->
 //    <!-- Function description -->
-    
-    
-    
-    
