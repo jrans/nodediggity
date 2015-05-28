@@ -1,33 +1,19 @@
 {
-  "name": "word-finder",
-  "version": "1.0.3",
-  "description": "find words in English dictionary with autosuggestion!",
+  "name": "autocomplete-fac",
+  "version": "1.0.2",
+  "description": "find words in English dictionary with auto suggestion",
   "main": "index.js",
-  "devDependencies": {
-    "codeclimate-test-reporter": "0.0.4",
-    "istanbul": "^0.3.14",
-    "jshint": "^2.7.0",
-    "pre-commit": "^1.0.7"
-  },
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "node test/test.js",
-    "nocov": "node test/*.js",
-    "coverage": "./node_modules/.bin/istanbul cover test/*.js && ./node_modules/.bin/istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
-    "codeclimate": "CODECLIMATE_REPO_TOKEN=1c0b40358b6943d3ecd94d6254d5cd2ac5dfc51188b4019bfca83b9b8a3542e2 ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info",
-    "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
-    "start": "node server.js",
-    "nodemon": "./node_modules/.bin/nodemon ./server.js"
+    "coverage": "istanbul cover test/test.js",
+    "nodemon": "./node_modules/.bin/nodemon server.js"
   },
-  "pre-commit": [
-    "jshint",
-    "coverage"
-  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jrans/nodediggity.git"
+    "url": "https://github.com/minaorangina/autocomplete.git"
   },
   "keywords": [
     "autocomplete",
@@ -35,15 +21,14 @@
     "dictionary",
     "suggestions"
   ],
-  "author": "jrans",
+  "author": "minaorangina",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jrans/nodediggity/issues"
+    "url": "https://github.com/minaorangina/autocomplete/issues"
   },
-
-  "homepage": "https://github.com/jrans/nodediggity",
-
-  "engines": {
-    "node": ">= 0.10"
+  "homepage": "https://github.com/minaorangina/autocomplete",
+  "devDependencies": {
+    "istanbul": "^0.3.14",
+    "nodemon": "^1.3.7"
   }
 }
