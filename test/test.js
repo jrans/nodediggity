@@ -28,25 +28,25 @@ ac.import(function(){
   console.log('#test: ac.stats tracks which words/string were searched for');
   ac.stats('rubies', function (err, stats){
     console.log(stats);
-    assert.equal(stats['rubies'].length, 1);
+    assert.equal(stats.rubies.length, 1);
     ac.stats('rubies', function (err, stats){
       console.log(stats);
-      assert.equal(stats['rubies'].length, 2);
+      assert.equal(stats.rubies.length, 2);
     });
   });
 });
 
 ac.import(function(){
 
-  var word = 'shirt'; 
+  var word = 'shirt';
 
   ac.define(word, function(err, definition){
 
-    assert.equal(definition[0].text, 'A garment for the upper part of the body, typically having a collar, sleeves, and a front opening.')
+    assert.equal(definition[0].text, 'A garment for the upper part of the body, typically having a collar, sleeves, and a front opening.');
 
-  })
+  });
 
-})
+});
 
 
 //index.js
