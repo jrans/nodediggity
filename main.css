@@ -9,15 +9,43 @@ body {
 #main {
   height: 90%;
 }
+
+/*main search bar, replicable for other search bars, possible optimisation with extended css languages*/
 #search{
   display: block;
+  vertical-align: middle;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 1%;
 }
+
+/*search results block, to appear above search bar*/
 #search-res{
-  display: none;    
+  display: block;
+  position: relative;
+  max-height: 300px;
+  background-color: aquamarine;
+  visibility: visible;
 }
+
+/* Two divs for search */
+#res-start{
+  display: inline-block;
+  position: relative;
+  background-color: greenyellow;
+  height: 300px;
+  overflow-y: scroll;
+  visibility: hidden;
+}
+#res-middle{
+  display: inline-block;
+  position: relative;
+  background-color: bisque;
+  height: 300px;
+  overflow-y: scroll;
+  visibility: hidden;
+}
+
+/*future page blocks, will require optimisation for height, etc*/
 #history{
   display: none;    
 }
@@ -31,19 +59,11 @@ body {
   display: none;    
 }
 
-<!-- divs for inline search results -->
-#res-start {
-  display: inline-block;
-  background-color: black;
-}
-
-#res-middle {
-  display: inline-block;
-  background-color: red;    
-}
 
 
 
+
+/*nav bar to stick on the bottom*/
 #navigation {
   height: 10%;
   position: absolute:;
