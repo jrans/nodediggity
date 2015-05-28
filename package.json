@@ -11,7 +11,8 @@
     "istanbul": "^0.3.14",
     "jshint": "^2.7.0",
     "pre-commit": "^1.0.7",
-    "nodemon": "^1.3.7"
+    "nodemon": "^1.3.7",
+    "qunitjs": "^1.18.0"
   },
   "scripts": {
     "test": "node test/test.js",
@@ -41,7 +42,10 @@
   "bugs": {
     "url": "https://github.com/jrans/nodediggity/issues"
   },
+    
   "homepage": "https://github.com/jrans/nodediggity",
+  
+ 
   "engines": {
     "node": ">= 0.10"
   }
