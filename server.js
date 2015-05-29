@@ -57,9 +57,11 @@ http.createServer(function handler(request, response) {
 
 
     // console.log(word);
-    ac.findWord(word, function (err, found){
+    ac.findWord(word, function (err, found, otherfound){
       // console.log(found);
-      response.end(found.join(','));     // response.end('word: ', word);
+      var foundObj={found:found.join(','),otherfound:otherfound.join(',')};
+      response.end(JSON.stringify(foundObj));
+      // response.end(found.join(','));     // response.end('word: ', word);
 
     });//ends findword
 
