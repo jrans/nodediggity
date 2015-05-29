@@ -37,9 +37,10 @@ body {
 #search-res{
   display: block;
   font-family: helvetica, sans-serif;
-  font-size: 1.7em;
+  font-size: 1.3em;
   position: relative;
   margin-top: 25px;
+  height:620px;
   min-height: 40%;
   max-height: 40%;
   visibility: visible;
@@ -55,7 +56,16 @@ body {
   font-size: 1.4em;
   padding-left: 45px;
   text-align: left;
+  overflow-x: inherit;
+  overflow-y: inherit;
+}
 
+#search-res li{
+  font-size: 1.4em;
+  padding-left: 45px;
+  text-align: left;
+  overflow-x: inherit;
+  overflow-y: inherit;
 }
 
 /* Two divs for search */
@@ -65,6 +75,7 @@ body {
   font-size: inherit;
   position: relative;
   background-color:lightblue;
+  height: inherit;
   min-height: 40%;
   min-width: 37%;
   max-width: 37%;
@@ -73,12 +84,30 @@ body {
   margin-right: 10px;
   visibility: hidden;
 }
+
+#res-start ul{
+  font-size: 1.4em;
+  padding-left: 45px;
+  text-align: left;
+  overflow-x: inherit;
+  overflow-y: inherit;
+}
+
+#res-start li{
+  font-size: 1.4em;
+  padding-left: 45px;
+  text-align: left;
+  overflow-x: inherit;
+  overflow-y: inherit;
+}
+
 #res-middle{
   border-radius: 25px;
   display: inline-block;
   font-size: inherit;
   position: relative;
   background-color: azure;
+  height: inherit;
   min-height: 40%;
   min-width: 37%;
   max-width: 37%;
@@ -86,6 +115,22 @@ body {
   overflow-x: hidden;
   margin-left: 10px;
   visibility: hidden;
+}
+
+#res-middle ul{
+  font-size: 1.4em;
+  padding-left: 45px;
+  text-align: left;
+  overflow-x: inherit;
+  overflow-y: inherit;
+}
+
+#res-middle li{
+  font-size: 1.4em;
+  padding-left: 45px;
+  text-align: left;
+  overflow-x: inherit;
+  overflow-y: inherit;
 }
 
 /*future page blocks, will require optimisation for height, etc*/
@@ -121,9 +166,6 @@ body {
   text-align: left;
   padding-left: 35px;
 }
-
-
-
 
 /*nav bar to stick on the bottom*/
 #navigation {
