@@ -47,14 +47,6 @@ http.createServer(function handler(request, response) {
 
   }
 
-  // if (url.indexOf('/searches/') > -1) {
-  //   // locahost:3000/searches/word
-  //   word = url.split('/')[2];
-  //   // console.log(word);
-  //   response.end(ac.searches);
-  //   // response.end('word: ', word);
-  // }
-
 
   else if (url.indexOf('/searches/') ===0) {
     word = url.split('/')[2];
@@ -63,9 +55,8 @@ http.createServer(function handler(request, response) {
       else {
         if (ac.searches[word]){response.end(JSON.stringify(ac.searches[word]));}
         else {response.end("no word history");}
-    }
-  }
-    else {response.end("no history");}
+      }
+    } else {response.end("no history");}
   }
 
   else if (url.indexOf('/define/') ===0) {

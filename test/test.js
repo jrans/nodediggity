@@ -26,12 +26,16 @@ ac.import(function(){
 
 ac.import(function(){
   console.log('#test: ac.stats tracks which words/string were searched for');
-  ac.stats('rubies', function (err, stats){
-    console.log(stats);
-    assert.equal(stats.rubies.length, 1);
-    ac.stats('rubies', function (err, stats){
-      console.log(stats);
-      assert.equal(stats.rubies.length, 2);
+  ac.stats('rubies', "find", function (err, stats){
+    assert.equal(stats.rubies.find.length, 1);
+    ac.stats('rubies', "find", function (err, stats){
+      assert.equal(stats.rubies.find.length, 2);
+      ac.stats('rubies', "define", function (err, stats){
+        assert.equal(stats.rubies.define.length, 1);
+        ac.stats('rubies', "define", function (err, stats){
+          assert.equal(stats.rubies.define.length, 2);
+        });
+      });
     });
   });
 });
