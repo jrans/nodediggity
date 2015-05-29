@@ -10,7 +10,11 @@ ac.import(function(err, count) {
 
 var fs = require('fs');
 var index = fs.readFileSync(__dirname + '/index.html');
+var styleSheet=fs.readFileSync(__dirname + "/main.css");
 var indexTests = fs.readFileSync(__dirname + '/indextests.js');
+var indexFunctions = fs.readFileSync(__dirname + '/indexfunctions.js');
+var diggity = fs.readFileSync(__dirname + '/diggityjq.js');
+
 
 http.createServer(function handler(request, response) {
   var url = request.url;
@@ -18,13 +22,31 @@ http.createServer(function handler(request, response) {
 
   if (url.length === 1) {
     response.writeHead(200, {"Content-Type": "text/html"});
-    response.end(index.toString());
+    response.write(index);
+    response.end();
+
   }
 
   else if (url == "/indextests.js") {
   	response.writeHead(200, {"Content-Type": "text/javascript"});
     response.end(indexTests.toString());
   }
+
+  else if (url == "/main.css") {
+  	response.writeHead(200, {"Content-Type": "text/css"});
+    response.end(styleSheet);
+  }
+
+  else if (url == "/diggityjq.js") {
+  	response.writeHead(200, {"Content-Type": "text/javascript"});
+    response.end(diggity);
+  }
+
+  else if (url == "/indexfunctions.js") {
+  	response.writeHead(200, {"Content-Type": "text/javascript"});
+    response.end(indexFunctions);
+  }
+
 
   else if (url.indexOf('/find/') ===0 ) {
     // locahost:3000/find/word
@@ -35,9 +57,11 @@ http.createServer(function handler(request, response) {
 
 
     // console.log(word);
-    ac.findWord(word, function (err, found){
+    ac.findWord(word, function (err, found, otherfound){
       // console.log(found);
-      response.end(found.join(','));     // response.end('word: ', word);
+      var foundObj={found:found.join(','),otherfound:otherfound.join(',')};
+      response.end(JSON.stringify(foundObj));
+      // response.end(found.join(','));     // response.end('word: ', word);
 
     });//ends findword
 
