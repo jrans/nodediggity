@@ -12,7 +12,27 @@
 Now, its ***fast, easy and fun***!  
 ***autocomplete*** lets you ***easily find words in the english dictionary***!
 
-## Why?
+
+About
+
+This is a simple app that will autocomplete when you are searching for a particular word. The app supports a find feature which lets you find words in a dictionary and also find the definitions of any given word.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Ignore below
 
 Learning how to build full-stack single-page apps can be laborious when the example app isn't particularly interesing/engaging, **Word Finder** is an *ultra-simple* app that will teach you full-stack test-driven-development using (*only*) ***core node.js*** modules on the backend and basic JQuery on the front-end (*no fancy frameworks*)
 
@@ -29,7 +49,7 @@ A ***great*** (*search*) **word finder** (*user experience*) *always* starts wit
 #### Clone the repo:
 
 ```sh
-git clone https://github.com/docdis/autocomplete.git && cd autocomplete
+git clone https://github.com/jrans/nodediggity.git && cd nodediggity
 ```
 
 #### Install the node.js devDependencies:
@@ -60,10 +80,10 @@ npm run nodemon
 
 ### Autocomplete HTTP Server (API)
 
-+ [ ] serve an html page with a ***search box***
-+ [ ] expose the `ac.findWords` method as an API endpoint /find/:word
-+ [ ] display the ***definition*** of a word when the person clicks/taps (*or navigates using the keyboard arrows - for extra credits*!) to their desired word
-+ [ ] display the ***history*** of words people have searched for
++ [x] serve an html page with a ***search box***
++ [x] expose the `ac.findWords` method as an API endpoint /find/:word
++ [x] display the ***definition*** of a word when the person clicks/taps (*or navigates using the keyboard arrows - for extra credits*!) to their desired word
++ [x] display the ***history*** of words people have searched for
 
 
 # Goals (*in your teams of 4*)
@@ -75,13 +95,13 @@ npm run nodemon
 + [ ] create an ***endpoint*** in server.js for the format: /define/:word which uses the ac module's findWords method to lookup word suggestions and returns an array of these suggestions as the http response
 
 In your module (index.js)
-+ [ ] write a ***test*** for a new method "**define**" which will return a `callback(err, definition)` when you call it in the following way: `ac.define(word, callaback)`
-+ [ ] write the `ac.define` method to **request** a word definition from Wiktionary API (*requires google skillz*! - *document your finding!!*)
-  + [ ] parse the result of this API request and extract the definition
-  + [ ] return the *just* the definition to the client for display in the UI when client visits url: **/define/awesome**
-+ [ ] expose the **searches** property of the **ac** module url: /searches/ should return a json object which the client can interpret and display
++ [x] write a ***test*** for a new method "**define**" which will return a `callback(err, definition)` when you call it in the following way: `ac.define(word, callaback)`
++ [x] write the `ac.define` method to **request** a word definition from Wiktionary API (*requires google skillz*! - *document your finding!!*)
+  + [x] parse the result of this API request and extract the definition
+  + [x] return the *just* the definition to the client for display in the UI when client visits url: **/define/awesome**
++ [x] expose the **searches** property of the **ac** module url: /searches/ should return a json object which the client can interpret and display
 
-> *Hint*: http://www.mediawiki.org/wiki/API:Tutorial + http://stackoverflow.com/questions/4175533/wikionary-api-meaning-of-words (*note*: you will need to put your thinking cap on for this challenge!)
+
 
 ## Pair 2
 
@@ -105,7 +125,7 @@ your code *before* anyone can commit (*unlinted*) code. (*code quality/consisten
 https://github.com/docdis/learn-pre-commit
 
 everyone must type: npm install pre-commit to use this!
-precommit in turn uses sitnabhul and jshint so install these too!... npm intstall jshint -g 
+precommit in turn uses sitnabhul and jshint so install these too!... npm intstall jshint -g
 
 
 + [ ] Learn about ***CodeClimate***, signup using your  GitHub account and add badge to repo readme.
