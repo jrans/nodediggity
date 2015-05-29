@@ -41,17 +41,12 @@ ac.import(function(){
 });
 
 ac.import(function(){
-
   var word = 'shirt';
-
   ac.define(word, function(err, definition){
-
     assert.equal(definition[0].text, 'A garment for the upper part of the body, typically having a collar, sleeves, and a front opening.');
-
   });
 
 });
-
 
 //index.js
 // ac.import is a function
