@@ -13,7 +13,7 @@ ac.import = function(callback){ // saving import fct as a property of ac{}
   });
 };
 
-ac.stats = function(word, callee, callback){  
+ac.stats = function(word, callee, callback){
   if (!ac.searches){
     ac.searches = {};
   }
@@ -46,27 +46,18 @@ ac.define = function (word, callback){
 	var url = 'http://api.wordnik.com/v4/word.json/'+ word +'/definitions?limit=1&includeRelated=true&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5';
 
 	var request = http.get(url, function(response) {
-
 		//Read the data
-        response.on('data', function (chunk) {
-            body += chunk;
-
-        });
-
-        response.on('end', function () {
-            // if(response.statusCode === 200) {
-
-                wordDef = JSON.parse(body);
+    response.on('data', function (chunk) {
+      body += chunk;
+    });
+    response.on('end', function () {
+      // if(response.statusCode === 200) {
+      wordDef = JSON.parse(body);
                 //console.log(body);
-                return callback(null, wordDef);
+      return callback(null, wordDef);
             // }
-        });
-
-
+    });
 	});
-
-
-
 };
 
 module.exports = ac;// exporting ac object to use elsewhere
