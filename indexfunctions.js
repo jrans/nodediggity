@@ -2,32 +2,32 @@
 //
 //    <!-- Button Switching script - possible improvements: switch to maintaining states? Or null all? -->
 
-document.getElementById('search-b').onclick = function () {
-    document.getElementById('search-res').style.display = 'block';
-    document.getElementById('history').style.display = 'none';
-    document.getElementById('hist-res').style.display = 'none';
-    document.getElementById('random').style.display = 'none';
-    document.getElementById('rand-res').style.display = 'none';
-    document.getElementById('search').style.display = 'block';
-};
-
-document.getElementById('history-b').onclick = function () {
-    document.getElementById('search').style.display = 'none';
-    document.getElementById('search-res').style.display = 'none';
-    document.getElementById('hist-res').style.display = 'none';
-    document.getElementById('random').style.display = 'none';
-    document.getElementById('rand-res').style.display = 'none';
-    document.getElementById('history').style.display = 'block';
-};
-
-document.getElementById('random-b').onclick = function () {
-    document.getElementById('search').style.display = 'none';
-    document.getElementById('search-res').style.display = 'none';
-    document.getElementById('history').style.display = 'none';
-    document.getElementById('hist-res').style.display = 'none';
-    document.getElementById('rand-res').style.display = 'none';
-    document.getElementById('random').style.display = 'block';
-};
+//document.getElementById('search-b').onclick = function () {
+//    document.getElementById('search-res').style.display = 'block';
+//    document.getElementById('history').style.display = 'none';
+//    document.getElementById('hist-res').style.display = 'none';
+//    document.getElementById('random').style.display = 'none';
+//    document.getElementById('rand-res').style.display = 'none';
+//    document.getElementById('search').style.display = 'block';
+//};
+//
+//document.getElementById('history-b').onclick = function () {
+//    document.getElementById('search').style.display = 'none';
+//    document.getElementById('search-res').style.display = 'none';
+//    document.getElementById('hist-res').style.display = 'none';
+//    document.getElementById('random').style.display = 'none';
+//    document.getElementById('rand-res').style.display = 'none';
+//    document.getElementById('history').style.display = 'block';
+//};
+//
+//document.getElementById('random-b').onclick = function () {
+//    document.getElementById('search').style.display = 'none';
+//    document.getElementById('search-res').style.display = 'none';
+//    document.getElementById('history').style.display = 'none';
+//    document.getElementById('hist-res').style.display = 'none';
+//    document.getElementById('rand-res').style.display = 'none';
+//    document.getElementById('random').style.display = 'block';
+//};
 
 // This text block is for the basic functions of the search api calls. It is currently in dummy form to demonstrate visibility switching, and will call the API up on each click
 //    <!-- on first key up, two inline divs are created above the search bar -->
