@@ -33,35 +33,36 @@ document.getElementById('random-b').onclick = function () {
 //    <!-- on first key up, two inline divs are created above the search bar -->
 //    <!-- On third key up api call searches for words starting with your term, puts them in LH div -->
 //    <!-- On third key up api call searches for words with your term in middle, puts them in RH div -->
-textApiQuery = function() {
-    var searchInput = document.getElementById('search-input');
-    console.log(searchInput);
-    console.log(searchInput.value);
-    var searchAlpha = document.createElement('LI');
-    var searchOther = document.createElement('LI');
-    var searchAlphaCall = document.createTextNode("Alpha");
-    var searchOtherCall = document.createTextNode("Other");                        
-//    var p = document.createElement("p")
-//    var p = document.createElement("p")
-    if(searchInput.value.length === 0) {
-        document.getElementById('search-res').style.visibility = 'hidden';
-        document.getElementById('res-start').style.visibility = 'hidden';
-        document.getElementById('res-middle').style.visibility = 'hidden';
-        //Create two divs
-    } else if(searchInput.value.length == 1) {
-            document.getElementById('search-res').style.visibility = 'visible';
-            document.getElementById('res-start').style.visibility = 'visible';
-            document.getElementById('res-middle').style.visibility = 'visible';
-            //Create two divs
-    } else if (searchInput.value.length > 2){
-            searchAlpha.appendChild(searchAlphaCall);
-            searchOther.appendChild(searchOtherCall);
-            document.getElementById('res-list').appendChild(searchAlpha);
-            document.getElementById('res-other').appendChild(searchOther);
-            //api call, push words starting with value to lh bar
-            //api call, push words with value in it minus values in lh bar to rh bar
-    }
-};
+//textApiQuery = function() {
+//    var searchInput = document.getElementById('search-input');
+//    console.log(searchInput);
+//    console.log(searchInput.value);
+//    var searchAlpha = document.createElement('LI');
+//    var searchOther = document.createElement('LI');
+//    var searchAlphaCall = document.createTextNode("Alpha");
+//    var searchOtherCall = document.createTextNode("Other");                        
+////    var p = document.createElement("p")
+////    var p = document.createElement("p")
+//    if(searchInput.value.length === 0) {
+//        document.getElementById('search-res').style.visibility = 'hidden';
+//        document.getElementById('res-start').style.visibility = 'hidden';
+//        document.getElementById('res-middle').style.visibility = 'hidden';
+//        //Create two divs
+//    } else if(searchInput.value.length == 1) {
+//            document.getElementById('search-res').style.visibility = 'visible';
+//            document.getElementById('res-start').style.visibility = 'visible';
+//            document.getElementById('res-middle').style.visibility = 'visible';
+//            //Create two divs
+//    } else if (searchInput.value.length > 2){
+//            searchAlpha.appendChild(searchAlphaCall);
+//            searchOther.appendChild(searchOtherCall);
+//            //document.getElementById('res-list').appendChild(searchAlpha);
+//            //document.getElementById('res-other').appendChild(searchOther);
+//            //api call, push words starting with value to lh bar
+//            //api call, push words with value in it minus values in lh bar to rh bar
+//    }
+//};
+
 
     
 //    <!-- On return or submit button press, two divs collapse to search results -->
@@ -72,11 +73,11 @@ dictEnter = function(){
     
 };
 
-//dictGet = function () {
-//    var dict = //api call for dictionary
-//    var dictDiv = document.createElement('div');
-//    document.getElementById('search').appendChild(dictDiv).setAttribute("id", "dict-div");   
-//}
+dictGet = function () {
+    var dict = "Hello world";//api call for dictionary
+    var dictDiv = document.createElement('div');
+    document.getElementById('search').appendChild(dictDiv).setAttribute("id", "dict-div");   
+};
 //    <!-- On return or submit, your search term is added to your history -->
 //    <!-- History is filled with your prior search terms, if no search term has been inputted, "No diggity" is displayed -->
 //    <!-- On clicking a history term the term is placed in the history res page, and displays definition -->
