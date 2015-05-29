@@ -28,12 +28,16 @@ ac.stats = function(word, callee, callback){
 ac.findWord = function (word, callback){
   //var found = ac.words[ac.words.indexOf(word)];
   var found = [];
+  var otherfound=[];
   for (var i = 0; i < ac.words.length; i++){
     if (ac.words[i].search(word) === 0){
       found.push(ac.words[i]);
     }
+  else if (ac.words[i].search(word) > 0){
+      otherfound.push(ac.words[i]);
+    }
   }
-  return callback(null,found);
+  return callback(null,found,otherfound);
 
 };
 
