@@ -55,7 +55,8 @@ body {
   font-size: 1.4em;
   padding-left: 45px;
   text-align: left;
-
+  overflow-x: inherit;
+  overflow-y: inherit;
 }
 
 /* Two divs for search */
@@ -121,9 +122,6 @@ body {
   text-align: left;
   padding-left: 35px;
 }
-
-
-
 
 /*nav bar to stick on the bottom*/
 #navigation {
