@@ -1,3 +1,7 @@
+. {
+    border: 1px, solid, red;
+}
+
 body {
   text-align: center;
   min-height: 100%;
@@ -8,6 +12,7 @@ body {
 }
 #main {
   height: 90%;
+  max-width: inherit;
 }
 
 /*main search bar, replicable for other search bars, possible optimisation with extended css languages*/
@@ -59,6 +64,14 @@ body {
   display: none;    
 }
 
+#output{
+  display: block;
+  position: relative;
+  height: 35%;
+  /*background-color: black; */
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
 
 
 

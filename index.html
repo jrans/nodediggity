@@ -2,6 +2,9 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <link rel="stylesheet" href="main.css">
+     
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+
     <title>Diggity Dictionary</title>
   </head>
   <body>
@@ -21,7 +24,7 @@
           </div>
           <div id='search'>
 
-              <input type='text' id='search-input' placeholder='Diggity?' onkeyup='textApiQuery();'> </input>
+              <input type='text' id='search-input' placeholder='Diggity?' > </input> <!--- onkeyup='textApiQuery();' --->
               <button id='search-req'></button>
           </div>
 
@@ -42,7 +45,11 @@
           <!-- This is a fourth surprise div for the stretch goal of displaying a No Diggity video if someone searches for "No diggity"
           <div id='rap'></div>
           -->
+          <div id='output'>
+            <ul id='output-l'></ul>
+          </div>
     </div>
+          
     <div id='navigation'>
         <button id='search-b'>Search</button>
         <button id='history-b'>History</button>
@@ -60,6 +67,6 @@
     -->
     <!-- This calls the functionality for the page switching, div creation -->
     <script src="indexfunctions.js"></script>    
-    
+    <script src="diggityjq.js"></script>
   </body>
 </html>
